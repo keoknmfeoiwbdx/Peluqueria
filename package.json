@@ -16,5 +16,11 @@
     "url": "https://github.com/keoknmfeoiwbdx/Peluqueria/issues"
   },
   "homepage": "https://github.com/keoknmfeoiwbdx/Peluqueria#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.18.2"
+  }
 }
