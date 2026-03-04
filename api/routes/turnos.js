@@ -391,7 +391,7 @@ router.post("/finalizar-turno", async (req, res) => {
 router.post("/completar-turno", async (req, res) => {
   const { turnoId, empleadoId } = req.body;
 
-  if (!turnoId || !empleadoId) {
+  if (turnoId === undefined || empleadoId === undefined) {
     return res.status(400).json({
       success: false,
       message: "Turno ID y Empleado ID son requeridos"

@@ -16,7 +16,7 @@ const createPool = () => {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       waitForConnections: true,
-      connectionLimit: 10, // Máximo 10 conexiones simultáneas
+      connectionLimit: 10, 
       queueLimit: 0,
       enableKeepAlive: true,
       keepAliveInitialDelay: 10000, // Mantener conexiones vivas
@@ -81,7 +81,7 @@ const conectDb = async () => {
         err.code === 'ER_CON_COUNT_ERROR') {
       console.log("🔄 Intentando recrear pool de conexiones...");
       pool = null;
-      return await conectDb(); // Recursivo
+      return await conectDb(); 
     }
     
     throw err;
